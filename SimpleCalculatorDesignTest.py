@@ -4,17 +4,13 @@ root = Tk()
 root.title("Simple Calculator")
 buttons = []
 
-def button_click(number):
-    e.delete(0, END)
-    e.insert(0, number)
-
 def callback():
     global buttonClicked
     print(buttonClicked)
 
 
 for i in range(10):
-    new_button = Button(root, text=9 - i, padx=10, pady=10, width=15, command=callback) # , command=lambda: button_click(['text' + str(i)])
+    new_button = Button(root, text=9 - i, padx=10, pady=10, width=15, command=callback)
     buttons.append(new_button)
 
     buttonClicked = i
